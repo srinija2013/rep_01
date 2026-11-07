@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Secret Portal</title>
+<title>Verification Required.</title>
 </head>
 
 <body>
 
-<h2>Enter Username</h2>
+<h2>Enter Unique User ID</h2>
 
 <input id="username">
 
@@ -23,7 +23,7 @@ function login(){
     const username =
         document.getElementById("username").value;
 
-    if(username === "DragonMaster7"){
+    if(username === "jsvkmzi"){
 
         document.getElementById("result").innerHTML = `
             <h3>Access Granted</h3>
@@ -32,15 +32,28 @@ function login(){
                 window.location.href=
                 'https://sites.google.com/view/YOUR-SITE/secret-page'
             ">
-                Open Secret Page
+                go on
             </button>
         `;
     }
+    else if(username === "4") {
+        document.getElementById("result").innerHTML = `
+            <h3>it's not very smart to pick 'C' every time.</h3>
+
+            <button onclick="
+                window.location.href=
+                'https://sites.google.com/view/YOUR-SITE/secret-page'
+            ">
+                go on
+            </button>
+        `;
+    }
+        
 
     else{
 
         document.getElementById("result").innerHTML =
-            "<h3>Invalid Username</h3>";
+            "<h3>Invalid User ID</h3>";
     }
 }
 

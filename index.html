@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret Portal</title>
+</head>
+
+<body>
+
+<h2>Enter Username</h2>
+
+<input id="username">
+
+<button onclick="login()">
+Login
+</button>
+
+<div id="result"></div>
+
+<script>
+
+function login(){
+
+    const username =
+        document.getElementById("username").value;
+
+    if(username === "DragonMaster7"){
+
+        document.getElementById("result").innerHTML = `
+            <h3>Access Granted</h3>
+
+            <button onclick="
+                window.location.href=
+                'https://sites.google.com/view/YOUR-SITE/secret-page'
+            ">
+                Open Secret Page
+            </button>
+        `;
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+            "<h3>Invalid Username</h3>";
+    }
+}
+
+</script>
+
+</body>
+</html>
